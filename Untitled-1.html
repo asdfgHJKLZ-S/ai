@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العداد التنازلي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* الخلفية سوداء بدرجة #121212 */
+            color: #fff; /* النص أبيض */
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* الشريط العلوي */
+        .top-bar {
+            width: 100%;
+            height: 50px; /* ارتفاع الشريط */
+            background-color: #151617; /* لون الشريط */
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center; /* توسيط العناصر عموديًا */
+            justify-content: space-between; /* توزيع العناصر بين الأطراف */
+            padding: 0 20px; /* مسافة داخلية */
+        }
+        .top-bar .logo-text {
+            color: #fff; /* لون النص أبيض */
+            font-size: 18px; /* حجم النص */
+            font-weight: bold; /* جعل النص عريضاً */
+        }
+        .top-bar img {
+            width: 40px; /* حجم الصورة */
+            height: 40px; /* نفس الحجم للعرض والطول */
+            border-radius: 50%; /* جعل الصورة دائرية */
+            margin-left: 40px; /* تحريك الصورة أكثر نحو اليسار */
+        }
+        h1 {
+            color: #fff; /* عنوان النص أبيض */
+            margin-top: 120px; /* مسافة من أعلى الصفحة */
+        }
+        #countdown {
+            font-size: 2em;
+            margin-top: 50px; /* مسافة إضافية بين العنوان والعداد */
+        }
+        .time-unit {
+            display: inline-block;
+            margin: 10px;
+        }
+        .time-unit span {
+            display: block;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .images-container {
+            display: flex;
+            justify-content: center; /* محاذاة الصور في المنتصف */
+            align-items: center; /* محاذاة الصور عموديًا */
+            margin-top: 20px;
+            gap: 20px; /* مسافة بين الصور */
+        }
+        .images-container img,
+        .images-container iframe {
+            max-width: 320px; /* عرض أقصى للصورة أو GIF */
+            height: auto;
+            border: 5px solid #121212; /* حواف سوداء بدرجة الخلفية */
+        }
+    </style>
+</head>
+<body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+        <div class="logo-text">ABOTRNDATGG</div>
+        <img src="ABOTRNDAT.png" alt="شعار دائري">
+    </div>
 
+    <h1>العداد التنازلي إلى 24 نوفمبر 2024</h1>
+    <div id="countdown">
+        <div class="time-unit">
+            <span id="days">0</span>
+            أيام
+        </div>
+        <div class="time-unit">
+            <span id="hours">0</span>
+            ساعات
+        </div>
+        <div class="time-unit">
+            <span id="minutes">0</span>
+            دقائق
+        </div>
+        <div class="time-unit">
+            <span id="seconds">0</span>
+            ثوانٍ
+        </div>
+    </div>
+
+    <!-- حاوية الصور (GIF والصورة) بجانب بعض -->
+    <div class="images-container">
+        <!-- GIF -->
+        <iframe src="https://giphy.com/embed/5YLtXupa2VlkCSYtbI" width="320" height="320" frameborder="0" allowfullscreen></iframe>
+        <!-- الصورة الجديدة -->
+        <img src="gsmarena_000.jpg" alt="الصورة الجديدة">
+    </div>
+
+    <script>
+        // تحديد التاريخ المستهدف
+        const targetDate = new Date("2024-11-24T00:00:00").getTime();
+
+        // تحديث العد التنازلي كل ثانية
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const timeDifference = targetDate - now;
+
+            if (timeDifference > 0) {
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = days;
+                document.getElementById("hours").textContent = hours;
+                document.getElementById("minutes").textContent = minutes;
+                document.getElementById("seconds").textContent = seconds;
+            } else {
+                clearInterval(countdown);
+                document.getElementById("countdown").textContent = "انتهى الوقت!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOTRNDATGG</title>
+    <!-- إضافة صورة الموقع -->
+    <link rel="icon" href="ABOTRNDAT.png" type="image/png">
+    <style>
+        /* باقي التنسيقات */
+    </style>
+</head>
+<head>
+<link rel="icon" href="ABOTRNDAT.png" type="image/png">
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOTRNDATGG</title>
+    <link rel="icon" href="ABOTRNDAT.png" type="image/png">
+    <style>
+        /* الشريط العلوي */
+        .top-bar {
+            width: 100%;
+            height: 70px; /* ارتفاع الشريط */
+            background-color: #151617; /* لون الشريط */
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center; /* توسيط العناصر عموديًا */
+            justify-content: space-between; /* توزيع العناصر بين الأطراف */
+            padding: 0 20px; /* مسافة داخلية */
+            z-index: 1000; /* تثبيت العنصر في الأعلى */
+        }
+        .top-bar .logo-text {
+            color: #fff; /* لون النص */
+            font-size: 18px; /* حجم النص */
+            font-weight: bold; /* جعل النص عريضاً */
+        }
+        .top-bar .countdown-text {
+            color: #a5b9b9; /* اللون المطلوب للنص */
+            font-size: 16px; /* حجم النص */
+            text-align: center; /* توسيط النص */
+            flex: 1; /* لملء المساحة المتبقية في الوسط */
+        }
+        .top-bar img {
+            width: 60px; /* حجم الصورة */
+            height: 60px; /* نفس الحجم للعرض والطول */
+            border-radius: 50%; /* جعل الصورة دائرية */
+            margin-left: 20px; /* تحريك الصورة إلى اليسار */
+        }
+    </style>
+</head>
+<body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+        <div>
+            <span class="logo-text">ABOTRNDATGG</span>
+        </div>
+        <span class="countdown-text">عد تنازلي ليوم شراي للجوال ان شاء الله</span>
+        <img src="ABOTRNDAT.png" alt="شعار الموقع">
+    </div>
+
+    <!-- محتوى الصفحة -->
+    <div style="margin-top: 90px; text-align: center;">
+        <h1 style="color: #fff;">مرحبًا بكم في موقعي</h1>
+    </div>
+</body>
+</html>
